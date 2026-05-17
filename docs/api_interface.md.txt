@@ -1,0 +1,21 @@
+模块接口定义
+
+1. 数据集组输出
+位置：data/processed/  预处理后图像
+位置：data/annotations/  标注文件
+位置：data/yaml/data.yaml  数据集配置
+
+2. 模型组输出
+位置：models/weights/best.pt  训练好的权重
+位置：models/configs/yolov8_custom.yaml  模型配置
+
+3. 部署组输出
+位置：scripts/infer.py  推理脚本
+位置：scripts/evaluate.py  评估脚本
+
+评估指标：
+mAP@50
+mAP@50-95
+Precision
+Recall
+FPS

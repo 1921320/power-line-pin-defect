@@ -1,0 +1,31 @@
+数据格式规范
+
+1. 图像文件
+格式：JPG 或 PNG
+命名：scene_class_id_number.jpg
+示例：tower_missing_01_001.jpg
+
+2. 标注文件（YOLO格式）
+每个图像对应同名.txt文件
+格式：class x_center y_center width height
+数值范围：0~1（归一化）
+
+类别编号：
+0 = normal_pin（正常销钉）
+1 = missing_pin（缺失销钉）
+2 = bolt（螺栓本体）
+
+3. 目录结构
+data/
+  raw/          原始图像
+  processed/    预处理后图像
+  annotations/  标注文件
+  yaml/         配置文件
+
+4. 标注规范
+螺栓：框住整个螺帽和螺杆
+正常销钉：框贴合销钉本体
+缺失销钉：框标注螺栓孔位置
+
+5. 数据划分
+训练集70%，验证集15%，测试集15%
