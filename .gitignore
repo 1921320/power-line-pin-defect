@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# 数据集和权重文件（太大，不上传Git）
+data/raw/
+data/processed/
+models/weights/
+runs/
+
+# Python缓存
+__pycache__/
+*.pyc
+
+# 虚拟环境
+venv/
+.env
